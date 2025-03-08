@@ -3,6 +3,9 @@ import { useState } from "react";
 import Map from "./components/Map";
 import "leaflet/dist/leaflet.css";
 import "react-datepicker/dist/react-datepicker.css";
+import "leaflet.markercluster/dist/leaflet.markercluster";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+
 import Navbar from "./components/Navbar";
 
 function App() {
