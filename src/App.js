@@ -1,12 +1,18 @@
 import "./App.css";
+import { useState } from "react";
 import Map from "./components/Map";
 import "leaflet/dist/leaflet.css";
+import "react-datepicker/dist/react-datepicker.css";
+import Navbar from "./components/Navbar";
 
 function App() {
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(null);
+
     return (
         <div className="App">
-            <h2 className="text-xl">Welcome to geojson maps</h2>
-            <Map />
+            <Navbar startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate} />
+            <Map startDate={startDate} endDate={endDate} />
         </div>
     );
 }
