@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# React Leaflet GeoJSON Map
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Features
 
-## Available Scripts
+This React application renders a **Leaflet map** that displays **GeoJSON data** retrieved from the City of Calgary API about contruction permits. The map includes the following functionalities:
 
-In the project directory, you can run:
+### ✅ **1. Display GeoJSON Data on Map**
 
-### `npm start`
+-   Uses **React Leaflet** to render **GeoJSON features** dynamically from an API.
+-   **Custom icons** are applied to point features using `pointToLayer`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ✅ **2. Interactive Popups**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-   Clicking a marker **opens a popup** displaying **feature details (name, description)**.
+-   The popup **fetches and displays feature properties** from the GeoJSON data.
 
-### `npm test`
+### ✅ **3. Search Functionality**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   A **search widget** allows users to filter GeoJSON data by sending a request to the API on certain date range.
 
-### `npm run build`
+### ✅ **4. Dynamic API Integration**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   GeoJSON data is fetched from a **backend API** (replace `API_URL` with your endpoint).
+-   Supports **query-based filtering** through API requests.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Technologies Used
 
-### `npm run eject`
+-   **React** (Frontend Framework)
+-   **React Leaflet** (Map rendering)
+-   **Leaflet.js** (Mapping library)
+-   **GeoJSON** (Geospatial data format)
+-   **React Icons** (FontAwesome Icons in markers)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔧 Configuration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Modify `API_URL` inside the `GeoJsonMap.js` file to point to your backend:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```tsx
+const API_URL = "https://your-api-endpoint.com/api/geojson";
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📜 Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Open the application.
+-   The map loads and displays GeoJSON data fetched from the API.
+-   Use the **search date range** to find permits for specific date range.
+-   Click on a **marker** to view more details in a popup.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📜 License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the **MIT License**.
