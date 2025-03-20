@@ -9,6 +9,8 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
     "leaflet": "^1.9.4",
+    "mapbox-gl": "^3.10.0",
+    "mapbox-gl-leaflet": "^0.0.16",
     "overlapping-marker-spiderfier-leaflet": "^0.2.7",
     "postcss": "^8.5.3",
     "react": "^19.0.0-rc.1",
